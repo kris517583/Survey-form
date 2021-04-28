@@ -1,0 +1,225 @@
+body
+{
+	font-family: "Open Sans", sans-serif;
+	margin:0;
+}
+#header
+{
+	vertical-align: middle;
+	color: #4d4643;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#header div
+{
+	display: inline-block;
+	padding:10px 30px;
+	border:1px solid #fc748d;
+	border-bottom: 8px solid #fc748d;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+}
+#title
+{
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+#description
+{
+	margin:auto;
+	margin-top: 5px;
+	text-align: center;
+}
+#survey-form
+{
+    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 992px)
+{
+	#survey-form
+	{
+		max-width: 960px!important;
+	}
+}
+@media (max-width: 768px)
+{
+	#survey-form
+	{
+		max-width: 720px
+	}
+}
+@media (max-width: 576px)
+{
+	#survey-form
+	{
+		max-width: 540px
+	}
+
+}
+
+#survey-form .form-container
+{
+	  background:#fff;
+    padding: 20px;
+    color: #000;
+    border: 1px solid #fc748d;
+    border-top: 8px solid #fc748d;
+    border-bottom: 8px solid #fc748d;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+#survey-form .active
+{
+  display: block !important;
+}
+#survey-form input[type=email],#survey-form input[type=text],#survey-form input[type=number]
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin:10px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#survey-form input[type=radio]
+{
+  position: relative !important;
+  margin: 0;
+  margin-top:4px;
+  margin-right: 4px; 
+}
+#survey-form label,#survey-form p
+{
+	padding: 12px;
+	font-weight: bold;
+}
+#survey-form .radio, #survey-form .Checkbox
+{
+	display: block;
+}
+#survey-form button
+{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  margin-left: 12px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fc748d;
+  animation-delay: 0.8s;
+  border: 2px solid #fc748d;
+  background-color:rgb(252,116,141,0.1);
+  cursor: pointer;
+}
+#survey-form select
+{
+  width: 100%;
+  padding: 16px 20px;
+  margin-left: 12px;
+  border-radius: 4px;
+  max-width: 300px;
+}
+#survey-form textarea 
+{
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin-left: 12px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+#prev
+{
+	left:0;
+	position: absolute;
+}
+#survey-form button:hover
+{
+  background: #fc748d;
+  color: #fff;
+  text-decoration: none;
+}
+.section
+{
+	display: none;
+}
+.section h2
+{
+	color: #4d4643;
+}
+
+#progresscontainer
+{
+  padding: 0;
+  padding-right: 15px;
+  padding-left:15px;
+  position: relative;
+}
+#progresscontainer h2
+{
+  margin: 0;
+  top:50%; 
+  font-size: 25px;
+  font-weight: 700;
+  color: dimgrey;
+  text-align: center; 
+  line-height: 0;
+  position: absolute;
+  left: 50%;
+  text-indent: -50%;
+  transition: color 1s;
+}
+.progressbar 
+{ 
+    height: 30px;
+    border-radius: 360px;
+    position: relative;
+    background: #f3efe6;
+    overflow: hidden;
+    max-width: 700px;
+    margin: auto;
+}
+
+.progressbar span 
+{
+    display: block;
+    height: 100%;
+    transition: 1s linear;
+    transition-delay: 0.5s;
+}
+
+.progresscontent
+{
+    background: repeating-linear-gradient(  45deg,  #ffbaba,  #ffbaba 10px,  #fc748d 10px,  #fc748d 20px);
+    animation: progressBar 1s ease-in-out;
+    animation-fill-mode:both; 
+}
+
+@keyframes progressBar 
+{
+  0% { width: 0; }
+  100% { width: 100%; }
+}
