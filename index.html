@@ -25,10 +25,11 @@
   <p id="description">Enter your feedback on career counselling</p>
 </div>
 </div>
-<div id="progresscontainer" style="padding: 0;padding-right: 15px; padding-left:15px;">
-<div class="progress-bar">
-    <span id="barprogress" style="width:25%;"><span class="progress"></span></span>
+<div id="progresscontainer">
+<div class="progressbar">
+    <span id="barprogress" style="width:25%;"><span class="progresscontent"></span></span>
 </div>
+<h2 id="indicator">1/4</h2>
 </div>
 <form id="survey-form">
   <div class="form-container">
@@ -36,22 +37,22 @@
     <h2>Step-1</h2>
     <div class="form-group">
       <label id="name-label" for="name">Name</label>
-      <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+      <input type="text" name="name" id="name"  placeholder="Enter your name" required="">
     </div>
     <div class="form-group">
       <label id="email-label" for="email">Email</label>
-      <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+      <input type="email" name="email" id="email"  placeholder="Enter your Email" required="">
     </div>
     <div class="form-group">
       <label id="number-label" for="number">Age</label>
-      <input type="number" name="age" id="number" min="10" max="60" class="form-control" placeholder="Age" required="">
+      <input type="number" name="age" id="number" min="10" max="60"  placeholder="Age" required="">
     </div>
     </div>
     <div class="section">
     <h2>Step-2</h2>
     <div class="form-group">
       <p>Which plan do you choose for you carreer counselling</p>
-      <select id="dropdown" name="plan" class="form-control" required="">
+      <select id="dropdown" name="plan"  required="">
         <option disabled="" selected="" value="">Select plan</option>
         <option value="student">Basic</option>
         <option value="job">VIP</option>
@@ -69,7 +70,7 @@
     <h2>Step-3</h2>
     <div class="form-group">
       <p>Which aspect of Rolecall excited you much?</p>
-      <select id="favorites" name="favorites" class="form-control" required="">
+      <select id="favorites" name="favorites"  required="">
         <option disabled="" selected="" value="">Select an option</option>
         <option value="PBP">Bridge between passion and profession</option>
         <option value="Safety">Safe environment in carreer counselling</option>
@@ -118,6 +119,7 @@
         }
       document.getElementById('submit').style.display = 'inline-block';
       document.getElementById('next').style.display = 'none';
+      document.getElementById('indicator').innerText = "4/4"
     }
     if(current_section == 2)
     {
@@ -126,6 +128,8 @@
           document.getElementById('dropdown').reportValidity();
           return;
         }
+        document.getElementById('indicator').innerText = "3/4"
+        document.getElementById('indicator').style.color="white"
     }
     if(current_section == 1)
     {
@@ -145,6 +149,7 @@
           return;
         }
         document.getElementById('prev').style.display = 'inline-block';
+        document.getElementById('indicator').innerText = "2/4"
     }
     document.getElementsByClassName('section')[current_section-1].classList.remove("active");
     document.getElementsByClassName('section')[current_section].classList.add("active");
@@ -156,11 +161,18 @@
     if(current_section == 2)
     {
       document.getElementById('prev').style.display = 'none';
+      document.getElementById('indicator').innerText = "1/4"
+    }
+    if(current_section == 3)
+    {
+      document.getElementById('indicator').innerText = "2/4"
+      document.getElementById('indicator').style.color="dimgrey"
     }
     if(current_section == 4)
     {
       document.getElementById('next').style.display = 'inline-block';
       document.getElementById('submit').style.display = 'none';
+      document.getElementById('indicator').innerText = "3/4"
     }
     document.getElementsByClassName('section')[current_section-1].classList.remove("active");
     document.getElementsByClassName('section')[current_section-2].classList.add("active");

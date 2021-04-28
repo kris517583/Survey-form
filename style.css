@@ -69,7 +69,7 @@ body
 
 #survey-form .form-container
 {
-	background:#fff;
+	  background:#fff;
     padding: 20px;
     color: #000;
     border: 1px solid #fc748d;
@@ -85,7 +85,7 @@ body
 }
 #survey-form .active
 {
-	display: block !important;
+  display: block !important;
 }
 #survey-form input[type=email],#survey-form input[type=text],#survey-form input[type=number]
 {
@@ -96,6 +96,13 @@ body
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+#survey-form input[type=radio]
+{
+  position: relative !important;
+  margin: 0;
+  margin-top:4px;
+  margin-right: 4px; 
 }
 #survey-form label,#survey-form p
 {
@@ -164,10 +171,31 @@ body
 	color: #4d4643;
 }
 
-
-.progress-bar 
+#progresscontainer
+{
+  padding: 0;
+  padding-right: 15px;
+  padding-left:15px;
+  position: relative;
+}
+#progresscontainer h2
+{
+  margin: 0;
+  top:50%; 
+  font-size: 25px;
+  font-weight: 700;
+  color: dimgrey;
+  text-align: center; 
+  line-height: 0;
+  position: absolute;
+  left: 50%;
+  text-indent: -50%;
+  transition: color 1s;
+}
+.progressbar 
 { 
-    height: 15px;
+    height: 30px;
+    border-radius: 360px;
     position: relative;
     background: #f3efe6;
     overflow: hidden;
@@ -175,7 +203,7 @@ body
     margin: auto;
 }
 
-.progress-bar span 
+.progressbar span 
 {
     display: block;
     height: 100%;
@@ -183,9 +211,9 @@ body
     transition-delay: 0.5s;
 }
 
-.progress 
+.progresscontent
 {
-    background-color:#fc748d;
+    background: repeating-linear-gradient(  45deg,  #ffbaba,  #ffbaba 10px,  #fc748d 10px,  #fc748d 20px);
     animation: progressBar 1s ease-in-out;
     animation-fill-mode:both; 
 }
